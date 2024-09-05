@@ -45,7 +45,7 @@ export default {
   methods: {
     async fetchData() {
       try {
-        const response = await axios.get('http://127.0.0.1:5000/api/data');
+        const response = await axios.get('https://datascoutgpt.onrender.com/api/data');
         this.message = response.data.message;
       } catch (error) {
         console.error('Error fetching data:', error);
