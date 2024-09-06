@@ -45,12 +45,7 @@ export default {
         class="chat-input"
       />
       <button @click="sendMessage" class="send-button">Send</button>
-    </div>
-    <div class="upload-container">
-      <input type="file" @change="handleFileUpload" />
-      <button @click="uploadFile" class="upload-button">Upload File</button>
-    </div>
-  </div>
+
 </template>
 
 <script>
