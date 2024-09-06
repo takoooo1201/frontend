@@ -45,7 +45,7 @@ export default {
         class="chat-input"
       />
       <button @click="sendMessage" class="send-button">Send</button>
-
+    </div>
 </template>
 
 <script>
@@ -218,24 +218,5 @@ export default {
 }
 
 /* 保留之前的樣式並增加檔案上傳按鈕的樣式 */
-.upload-container {
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
-}
 
-.upload-button {
-  margin-left: 10px;
-  padding: 10px 20px;
-  border-radius: 8px;
-  border: none;
-  background-color: #4a90e2;
-  color: #ffffff;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.upload-button:hover {
-  background-color: #357ab7;
-}
 </style>
