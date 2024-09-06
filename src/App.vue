@@ -79,25 +79,7 @@ export default {
 
       this.userInput = '';
     },
-    handleFileUpload(event) {
-      this.selectedFile = event.target.files[0];
-    },
-    async uploadFile() {
-      if (!this.selectedFile) {
-        alert('Please select a file to upload.');
-        return;
-      }
 
-      const formData = new FormData();
-      formData.append('file', this.selectedFile);
-
-      try {
-        const response = await axios.post('http://127.0.0.1:5000/upload', formData);
-        console.log('Upload Response:', response.data);
-      } catch (error) {
-        console.error('Error uploading file:', error);
-      }
-    },
     parseMarkdown(content) {
       return marked(content); // Convert Markdown to HTML
     },
