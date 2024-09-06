@@ -46,6 +46,7 @@ export default {
       />
       <button @click="sendMessage" class="send-button">Send</button>
     </div>
+  </div>
 </template>
 
 <script>
@@ -57,7 +58,7 @@ export default {
     return {
       userInput: '',
       chatHistory: [],
-      selectedFile: null,
+      //selectedFile: null,
     };
   },
   methods: {
