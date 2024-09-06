@@ -74,7 +74,7 @@ export default {
       this.chatHistory.push({ role: 'user', content: this.userInput });
 
       try {
-        const response = await axios.post('http://127.0.0.1:5000/chat', {
+        const response = await axios.post('https://datascoutgpt.onrender.com/chat', {
           prompt: this.userInput,
         });
 
