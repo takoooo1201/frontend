@@ -25,18 +25,16 @@ export default {
 }
 </style> -->
 
-<!-- src/components/ChatBotView.vue -->
-<template>
+<!-- src/components/ChatBotView.vue --><template>
   <div class="chat-container">
-    <h1 class="chat-header">Chatbot</h1>
+    <h1 class="chat-header">dataScoutGPT</h1>
     <div class="chat-window">
       <div
         v-for="(message, index) in chatHistory"
         :key="index"
         :class="['message', message.role === 'user' ? 'user-message' : 'bot-message']"
-      >
-        <p>{{ message.content }}</p>
-      </div>
+        v-html="message.role === 'bot' ? parseMarkdown(message.content) : message.content"
+      ></div>
     </div>
     <div class="input-container">
       <input
@@ -57,7 +55,7 @@ export default {
 
 <script>
 import axios from 'axios';
-
+import { marked } from 'marked'; // Import the marked library
 export default {
   name: 'ChatBotView',
   data() {
@@ -105,6 +103,9 @@ export default {
         console.error('Error uploading file:', error);
       }
     },
+    parseMarkdown(content) {
+      return marked(content); // Convert Markdown to HTML
+    },
   },
 };
 </script>
@@ -118,7 +119,7 @@ export default {
   height: 100vh;
   background-color: #1e1e1e;
   color: #ffffff;
-  padding: 20px;
+  /* padding: 20px; */
 }
 
 .chat-header {
@@ -140,7 +141,7 @@ export default {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.message {
+/* .message {
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 8px;
@@ -158,7 +159,51 @@ export default {
   align-self: flex-start;
   background-color: #3b3b3b;
   color: #ffffff;
+} */
+
+.message {
+  /* display: flex; */
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  max-width: 80%;
+  word-wrap: break-word;
 }
+/* 
+.user-message {
+  justify-content: flex-end;
+  align-self: flex-end;
+  background-color: #4a90e2;
+  color: #ffffff;
+  margin-left: auto; 
+}
+ */
+
+.user-message {
+  justify-content: flex-end;
+  /* display: inline-block; */
+  align-self: flex-end;
+  background-color: #4a90e2;
+  color: #ffffff;
+  margin-left: auto; /* Aligns the message to the right */
+  max-width: 60%; /* Limit the maximum width */
+  padding: 10px;
+  border-radius: 8px;
+  word-break: break-word; /* Allows long words to wrap */
+  white-space: normal; /* Normal white space handling */
+}
+
+.bot-message {
+  /* justify-content: flex-start; */
+  align-self: flex-start;
+  background-color: #3b3b3b;
+  color: #ffffff;
+  /* margin-right: auto; */
+  /* white-space: pre-wrap;
+  word-break: break-word;  */
+}
+
+
 
 .input-container {
   display: flex;
