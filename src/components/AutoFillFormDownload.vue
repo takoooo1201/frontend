@@ -1,18 +1,18 @@
 <template>
-    <div class="auto-fill-form">
+    <!-- PDF Viewer -->
+    <div v-if="pdfUrl" class="pdf-viewer">
+        <iframe :src="pdfUrl" width="100%" height="600px" frameborder="0"></iframe>
+    </div>
+    <div v-else class="auto-fill-form">
         <div>
             <h1>Auto Fill Form Download</h1>
         </div>
         <br>
         <hr>
         <br>
-        <div class="button-container"   >
+        <div class="button-container">
             <button class="button" @click="downloadPdf">Download PDF</button>
         </div>
-    </div>
-    <!-- PDF Viewer -->
-    <div v-if="pdfUrl" class="pdf-viewer">
-            <iframe :src="pdfUrl" width="100%" height="600px" frameborder="0"></iframe>
     </div>
 </template>
 
