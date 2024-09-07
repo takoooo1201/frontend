@@ -5,6 +5,7 @@ import ChatbotComponent from '../components/chatbotComponent.vue';
 
 import UploadComponent from '../components/uploadComponent.vue';
 import AutoFillFormDownload from '@/components/AutoFillFormDownload.vue';
+import ShowPdf from '@/components/ShowPdf.vue';
 const routes = [
   {
     path: '/',
@@ -20,6 +21,11 @@ const routes = [
     path: '/download',
     name: 'download',
     component: AutoFillFormDownload,
+  },
+  {
+    path: '/showpdf',
+    name: 'showpdf',
+    component: ShowPdf,
   },
 ];
 
