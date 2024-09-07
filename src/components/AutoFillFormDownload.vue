@@ -1,12 +1,16 @@
 <template>
-    <div class="auto-fill-form">
+    <!-- PDF Viewer -->
+    <div v-if="pdfUrl" class="pdf-viewer">
+        <iframe :src="pdfUrl" width="100%" height="600px" frameborder="0"></iframe>
+    </div>
+    <div v-else class="auto-fill-form">
         <div>
             <h1>Auto Fill Form Download</h1>
         </div>
         <br>
         <hr>
         <br>
-        <div class="button-container"   >
+        <div class="button-container">
             <button class="button" @click="downloadPdf">Download PDF</button>
         </div>
     </div>
@@ -15,8 +19,8 @@
 <script>
 import {PDFDocument, rgb} from 'pdf-lib';
 import fontkit from '@pdf-lib/fontkit';
-const BaseURL = 'https://taipei-microservices-initiative-hayu.onrender.com/api/';
-// const BaseURL = 'http://localhost:8081/api/';
+// const BaseURL = 'https://taipei-microservices-initiative-hayu.onrender.com/api/';
+const BaseURL = 'http://localhost:8081/api/';
 export default {
     data() {
         return {
@@ -25,7 +29,8 @@ export default {
             postCollection: {
                 extra1: 'extraaaaaa one one one',
                 extra2: 'extra two two two',
-            }
+            },
+            pdfUrl: '',
         };
     },
     methods: {
@@ -120,7 +125,8 @@ export default {
                 link.href = URL.createObjectURL(blob);
                 link.download = formname + '_' + userData.name + '.pdf';
                 link.click();
-
+                this.pdfUrl = BaseURL + 'autofillform/showpdf/' + formname + '_' + userData.name + '.pdf';
+                console.log("pdfUrl: " + this.pdfUrl);
                 // sent the modified pdf to backend
                 await fetch(BaseURL + 'autofillform/savePDF/' + formname + '_' + userData.name, {
                     method: 'POST',
