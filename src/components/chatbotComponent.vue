@@ -213,12 +213,13 @@ export default {
     </div>
     <!-- a button link to download-->
      <br>
-    <div class="button-container">
+    <div v-if="canDownload" class="button-container">
       <router-link :to="{ path: '/download', query: { formname: 'travelform', userid: 5, extra1: extra1 } }" class="button">
         <button class="send-button">Download PDF</button>
       </router-link>
       </div>
   </div>
+  <button @click="canDownload = !canDownload">Toggle Download Button</button>
 </template>
 
 <script>
@@ -231,6 +232,7 @@ export default {
       userInput: '',
       chatHistory: [],
       extra1: '早安橙汁內',
+      canDownload: false,
       //selectedFile: null,
     };
   },
