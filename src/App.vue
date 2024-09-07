@@ -1,8 +1,11 @@
 <template>
-  <h1>HEllo Hello</h1>
-  <roturer-link to="/upload">Upload</roturer-link>
-  <roturer-link to="/chatbot">Chatbot</roturer-link>
-  <roturer-link to="/autofillform">AutoFillForm</roturer-link>
+  <h1>Hello Hello</h1>
+  <nav>
+    <router-link to="/upload">Upload</router-link>
+    <router-link to="/">Chatbot</router-link>
+    <router-link to="/download?formname=travelform&userid=5&extra1=哈囉囉囉囉">Download</router-link>
+  </nav>
+  <!-- direct to download-->
   
   <!-- <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/> -->
@@ -32,7 +35,3 @@ export default {
   margin-top: 60px;
 }
 </style>
-
-
-
-
