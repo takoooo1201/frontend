@@ -214,7 +214,7 @@ export default {
     <!-- a button link to download-->
      <br>
     <div class="button-container">
-      <router-link to="/download?formname=travelform&userid=5&extra1=哈囉囉囉囉" class="button">
+      <router-link :to="{ path: '/download', query: { formname: 'travelform', userid: 5, extra1: extra1 } }" class="button">
         <button class="send-button">Download PDF</button>
       </router-link>
       </div>
@@ -230,6 +230,7 @@ export default {
     return {
       userInput: '',
       chatHistory: [],
+      extra1: '早安橙汁內',
       //selectedFile: null,
     };
   },
