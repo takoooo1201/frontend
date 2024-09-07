@@ -211,6 +211,13 @@ export default {
       />
       <button @click="sendMessage" class="send-button">Send</button>
     </div>
+    <!-- a button link to download-->
+     <br>
+    <div class="button-container">
+      <router-link to="/download?formname=travelform&userid=5&extra1=哈囉囉囉囉" class="button">
+        <button class="send-button">Download PDF</button>
+      </router-link>
+      </div>
   </div>
 </template>
 
