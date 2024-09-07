@@ -1,7 +1,12 @@
 <template>
     <div class="auto-fill-form">
-        <h1>Auto Fill Form Download</h1>
-        <div class="button-container">
+        <div>
+            <h1>Auto Fill Form Download</h1>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="button-container"   >
             <button class="button" @click="downloadPdf">Download PDF</button>
         </div>
     </div>
@@ -24,6 +29,10 @@ export default {
         };
     },
     methods: {
+        
+
+
+
         async modifyPdf(userid, formname) {
             try {
                 // Fetch the PDF template
