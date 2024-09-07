@@ -7,7 +7,7 @@ import UploadComponent from '../components/uploadComponent.vue';
 import AutoFillFormDownload from '@/components/AutoFillFormDownload.vue';
 const routes = [
   {
-    path: '/chatbot',
+    path: '/',
     name: 'Chatbot',
     component: ChatbotComponent,
   },

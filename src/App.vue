@@ -1,7 +1,14 @@
 <template>
+  <h1>HEllo Hello</h1>
+  <roturer-link to="/upload">Upload</roturer-link>
+  <roturer-link to="/chatbot">Chatbot</roturer-link>
+  <roturer-link to="/autofillform">AutoFillForm</roturer-link>
+  
   <!-- <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-  <router-view />
+  <div>
+    <router-view />
+  </div>  
 </template>
 
 <script>
