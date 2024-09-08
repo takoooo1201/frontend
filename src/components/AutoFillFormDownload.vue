@@ -26,7 +26,7 @@ export default {
         return {
             formname: this.$route.query.formname,
             userid: this.$route.query.userid,
-            username: '',
+            username: '蔣萬萬',
             postCollection: {
                 extra1: 'extraaaaaa one one one',
                 extra2: 'extra two two two',
@@ -55,7 +55,7 @@ export default {
                 let a = "name";
                 console.log(userData[a]);
                 this.username = userData[a];
-                alert(this.username);
+                
                 const pdfDetailsOringin = await fetch(BaseURL + 'autofillform/detail/' + formname);
 
                 const pdfDetailsfull = await pdfDetailsOringin.json();
@@ -139,8 +139,7 @@ export default {
                 });
 
                 // derict to showpdf
-                const newUrl = '/showpdf?file=' + formname + '_' + userData.name + '.pdf';
-                this.$router.push(newUrl);
+                
             } catch (error) {
                 console.error('Error modifying PDF:', error);
             }
@@ -165,7 +164,10 @@ export default {
             console.log(userid);
             console.log(formname);
 
-            this.modifyPdf(userid, formname);
+            await this.modifyPdf(userid, formname);
+
+            const newUrl = '/showpdf?file=' + formname + '_' + this.username + '.pdf';
+            this.$router.push(newUrl);
 
             
         },
