@@ -146,6 +146,7 @@ export default {
         },
 
         async downloadPdf() {
+            
             const userid = this.$route.query.userid;
             const formname = this.$route.query.formname;
             if (this.$route.query.extra1) {
@@ -163,11 +164,13 @@ export default {
             }
             console.log(userid);
             console.log(formname);
+            const newUrl = '/showpdf?file=' + formname + '_' + this.username + '.pdf';
+            this.$router.push(newUrl);
 
             await this.modifyPdf(userid, formname);
 
-            const newUrl = '/showpdf?file=' + formname + '_' + this.username + '.pdf';
-            this.$router.push(newUrl);
+            // const newUrl = '/showpdf?file=' + formname + '_' + this.username + '.pdf';
+            // this.$router.push(newUrl);
 
             
         },
