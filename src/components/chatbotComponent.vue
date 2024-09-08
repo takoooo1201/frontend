@@ -270,29 +270,30 @@ export default {
   /*justify-content: center;*/
   align-items: center;
   height: 100vh;
-  background-color: #1e1e1e;
+  background-color: #ffffff;
   color: #ffffff;
   width: 100%;
+
   /* padding: 20px; */
 }
 
 .chat-header {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #ffffff;
+  color: #221e1e;
 }
 
 .chat-window {
   width: 90%;
   /*max-width: 600px;*/
   height: 400px;
-  border: 1px solid #333;
+  border: 1px solid #c1c1c1;
   border-radius: 8px;
-  background-color: #2e2e2e;
+  background-color: #e9e4e4;
   padding: 15px;
   overflow-y: scroll;
   margin-bottom: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  
 }
 
 /* .message {
@@ -337,8 +338,8 @@ export default {
   justify-content: flex-end;
   /* display: inline-block; */
   align-self: flex-end;
-  background-color: #4a90e2;
-  color: #00bcd4;
+  background-color: #00bcd4;
+  color: #ffffff;
   margin-left: auto; /* Aligns the message to the right */
   max-width: 60%; /* Limit the maximum width */
   padding: 10px;
@@ -350,7 +351,7 @@ export default {
 .bot-message {
   justify-content: flex-start; 
   align-self: flex-start;
-  background-color: #3b3b3b;
+  background-color: #4a90e2;
   color: #ffffff;
   margin-right: auto; 
   /* white-space: pre-wrap;
@@ -370,22 +371,22 @@ export default {
   flex: 1;
   padding: 10px;
   border-radius: 8px;
-  border: 1px solid #444;
-  background-color: #2e2e2e;
-  color: #ffffff;
+  border: 1px solid #b5b5b5;
+  background-color: #d2d2d2;
+  color: #000000;
   margin-right: 10px;
 }
 
 .chat-input::placeholder {
-  color: #888;
+  color: #676767;
 }
 
 .send-button {
   padding: 10px 20px;
   border-radius: 8px;
   border: none;
-  background-color: #4a90e2;
-  color: #00bcd4;
+  background-color: #00bcd4;
+  color: #ffffff;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
