@@ -347,11 +347,11 @@ export default {
 }
 
 .bot-message {
-  /* justify-content: flex-start; */
+  justify-content: flex-start; 
   align-self: flex-start;
   background-color: #3b3b3b;
   color: #ffffff;
-  /* margin-right: auto; */
+  margin-right: auto; 
   /* white-space: pre-wrap;
   word-break: break-word;  */
 }
@@ -362,7 +362,7 @@ export default {
   display: flex;
   align-items: center;
   width: 100%;
-  max-width: 600px;
+  max-width: 500px;
 }
 
 .chat-input {
