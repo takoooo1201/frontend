@@ -267,7 +267,7 @@ export default {
 .chat-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /*justify-content: center;*/
   align-items: center;
   height: 100vh;
   background-color: #1e1e1e;
@@ -282,8 +282,8 @@ export default {
 }
 
 .chat-window {
-  width: 100%;
-  max-width: 600px;
+  width: 90%;
+  /*max-width: 600px;*/
   height: 400px;
   border: 1px solid #333;
   border-radius: 8px;
@@ -362,7 +362,7 @@ export default {
   display: flex;
   align-items: center;
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
 }
 
 .chat-input {
