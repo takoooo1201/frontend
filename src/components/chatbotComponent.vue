@@ -338,7 +338,7 @@ export default {
   /* display: inline-block; */
   align-self: flex-end;
   background-color: #4a90e2;
-  color: #ffffff;
+  color: #00bcd4;
   margin-left: auto; /* Aligns the message to the right */
   max-width: 60%; /* Limit the maximum width */
   padding: 10px;
@@ -385,13 +385,13 @@ export default {
   border-radius: 8px;
   border: none;
   background-color: #4a90e2;
-  color: #ffffff;
+  color: #00bcd4;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .send-button:hover {
-  background-color: #00bcd4;
+  background-color: #357ab7;
 }
 
 /* 保留之前的樣式並增加檔案上傳按鈕的樣式 */
