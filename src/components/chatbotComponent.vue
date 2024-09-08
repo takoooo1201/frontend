@@ -192,7 +192,7 @@ export default {
 </style> -->
 <template>
   <div class="chat-container">
-    <h1 class="chat-header">dataScoutGPT</h1>
+    <h1 class="chat-header">AI專員</h1>
     <div class="chat-window">
       <div
         v-for="(message, index) in chatHistory"
