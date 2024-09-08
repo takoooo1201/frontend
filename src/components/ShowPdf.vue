@@ -1,19 +1,34 @@
 <template>
     <div>
-      <embed :src="pdfUrl" width="100%" height="600px" type="application/pdf" />
+        <h1>Click to Download</h1>
+        <h3>{{ this.BaseURL + 'autofillform/showpdf/' + this.$route.query.file  }}</h3>
     </div>
-  </template>
-  
-  <script>
-const BaseURL = 'https://taipei-microservices-initiative-hayu.onrender.com/api/';
-// const BaseURL = 'http://localhost:8081/api/';
-  export default {
+    <div>
+        <QrCode :link="this.BaseURL + 'autofillform/showpdf/' + this.$route.query.file" />
+    </div>
+</template>
 
-    data() {
-      return {
-        // /showpdf?file=filename
-        pdfUrl: BaseURL + 'autofillform/showpdf/' + this.$route.query.file,
-      };
+<script>
+import QrCode from './QRcode.vue';
+export default {
+    components: {
+        QrCode,
     },
-  };
-  </script>
+    data() {
+        return {
+            BaseURL: 'https://taipei-microservices-initiative-hayu.onrender.com/api/',
+            link: this.BaseURL + 'autofillform/showpdf/' + this.$route.query.file,
+        };
+    },
+    mounted() {
+        console.log(this.BaseURL);
+    }
+};
+</script>
+
+
+<style scoped>
+canvas {
+    border: 1px solid black;
+}
+</style>
