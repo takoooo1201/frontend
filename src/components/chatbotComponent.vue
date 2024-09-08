@@ -272,6 +272,7 @@ export default {
   height: 100vh;
   background-color: #1e1e1e;
   color: #ffffff;
+  width: 100%;
   /* padding: 20px; */
 }
 
@@ -390,7 +391,7 @@ export default {
 }
 
 .send-button:hover {
-  background-color: #357ab7;
+  background-color: #00bcd4;
 }
 
 /* 保留之前的樣式並增加檔案上傳按鈕的樣式 */
