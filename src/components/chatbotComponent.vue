@@ -267,7 +267,7 @@ export default {
 .chat-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /*justify-content: center;*/
   align-items: center;
   height: 100vh;
   background-color: #1e1e1e;
@@ -282,8 +282,8 @@ export default {
 }
 
 .chat-window {
-  width: 100%;
-  max-width: 600px;
+  width: 90%;
+  /*max-width: 600px;*/
   height: 400px;
   border: 1px solid #333;
   border-radius: 8px;
@@ -347,11 +347,11 @@ export default {
 }
 
 .bot-message {
-  /* justify-content: flex-start; */
+  justify-content: flex-start; 
   align-self: flex-start;
   background-color: #3b3b3b;
   color: #ffffff;
-  /* margin-right: auto; */
+  margin-right: auto; 
   /* white-space: pre-wrap;
   word-break: break-word;  */
 }
