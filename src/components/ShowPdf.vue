@@ -1,7 +1,12 @@
 <template>
     <div>
         <h1>Click to Download</h1>
-        <h3>{{ this.BaseURL + 'autofillform/showpdf/' + this.$route.query.file  }}</h3>
+        <h3>
+            <a :href="this.BaseURL + 'autofillform/showpdf/' + this.$route.query.file ">
+
+            {{this.BaseURL + 'autofillform/showpdf/' + this.$route.query.file  }}
+            </a>
+         </h3>
     </div>
     <div>
         <QrCode :link="this.BaseURL + 'autofillform/showpdf/' + this.$route.query.file" />
